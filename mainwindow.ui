@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1037</width>
+    <height>683</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButton_enable">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Enable Motors</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_disable">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>10</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Disable Motors (ctrl + D)</string>
+    </property>
+    <property name="shortcut">
+     <string>Ctrl+D</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_move">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>500</y>
+      <width>131</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Move</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_left_hip_status">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>0</y>
+      <width>111</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>   Left Hip</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_right_hip_status">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>0</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>   Right Hip</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_left_knee_status">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>0</y>
+      <width>121</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>   Left Knee</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_right_knee_status">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>0</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>  Right Knee</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_gaitCadence">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>550</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_stepSize">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>590</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_motor_speed">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>550</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Gait Cadence</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_motor_speed_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>590</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Step Size (%)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_move_withVelocity">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>500</y>
+      <width>241</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Move to Position with Velocity</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>861</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="JointAngleData">
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+     <widget class="QCustomPlot" name="gait_monitor_1" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>851</width>
+        <height>411</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+     <widget class="QCustomPlot" name="gaitCadence_monitor" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>851</width>
+        <height>411</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+     <widget class="QCustomPlot" name="gaitEvent_left" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>851</width>
+        <height>205</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCustomPlot" name="gaitEvent_right" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>200</y>
+        <width>851</width>
+        <height>205</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+     <widget class="QCustomPlot" name="qcustomPlot_gaitCadence" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>851</width>
+        <height>411</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_left_foot_IMU_status">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>130</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Left Foot IMU</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_right_foot_IMU_status">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>180</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Right Foot IMU</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_waist_IMU_status">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>90</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Waist IMU</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_target_gaitCadence">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>510</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Elephant</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Target Gait Cadence</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_targetGaitCadence">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>510</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_walking">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>240</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Unicode MS</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Walking</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_stairAcent">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>280</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Unicode MS</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Stair Acent</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_stairDecent">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>310</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Stair Decent</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_threadTest">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>500</y>
+      <width>161</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>RUN</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_stopThread">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>580</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Stop</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_moveWithVelocity">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>580</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Move with Velocity</string>
+    </property>
+   </widget>
+   <zorder>pushButton_enable</zorder>
+   <zorder>pushButton_disable</zorder>
+   <zorder>pushButton_move</zorder>
+   <zorder>label_left_hip_status</zorder>
+   <zorder>label_right_hip_status</zorder>
+   <zorder>label_left_knee_status</zorder>
+   <zorder>label_right_knee_status</zorder>
+   <zorder>lineEdit_gaitCadence</zorder>
+   <zorder>lineEdit_stepSize</zorder>
+   <zorder>label_motor_speed</zorder>
+   <zorder>label_motor_speed_2</zorder>
+   <zorder>pushButton_move_withVelocity</zorder>
+   <zorder>label_left_foot_IMU_status</zorder>
+   <zorder>label_right_foot_IMU_status</zorder>
+   <zorder>label_waist_IMU_status</zorder>
+   <zorder>tabWidget</zorder>
+   <zorder>label_target_gaitCadence</zorder>
+   <zorder>lineEdit_targetGaitCadence</zorder>
+   <zorder>radioButton_walking</zorder>
+   <zorder>radioButton_stairAcent</zorder>
+   <zorder>radioButton_stairDecent</zorder>
+   <zorder>pushButton_threadTest</zorder>
+   <zorder>pushButton_stopThread</zorder>
+   <zorder>pushButton_moveWithVelocity</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1037</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuOpen_Gait_Data">
+     <property name="title">
+      <string>Open Gait Data</string>
+     </property>
+     <addaction name="actionJoint_Angle_Data"/>
+     <addaction name="actionJoint_Angular_Velocity_Data"/>
+    </widget>
+    <addaction name="actionOpen"/>
+    <addaction name="menuOpen_Gait_Data"/>
+    <addaction name="actionNew_Measurement"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuExtras">
+    <property name="title">
+     <string>Extras</string>
+    </property>
+    <widget class="QMenu" name="menuConnect_IMUs">
+     <property name="title">
+      <string>Connect IMUs</string>
+     </property>
+     <addaction name="actionLeft_Foot"/>
+     <addaction name="actionRight_Foot"/>
+     <addaction name="actionwaist"/>
+    </widget>
+    <addaction name="actionConnect_All"/>
+    <addaction name="menuConnect_IMUs"/>
+    <addaction name="actionDisconnect_All"/>
+    <addaction name="separator"/>
+    <addaction name="actionActivate_Profile_Position_Mode"/>
+    <addaction name="actionActivate_Profile_Velocity_Mode"/>
+    <addaction name="separator"/>
+    <addaction name="actionCalibration"/>
+    <addaction name="actionStand"/>
+    <addaction name="actionStand_ver2"/>
+    <addaction name="actionSit"/>
+    <addaction name="actionSit_ver2"/>
+    <addaction name="separator"/>
+    <addaction name="actionStart_Timer"/>
+    <addaction name="actionStart_Measurement"/>
+    <addaction name="actionStop_Measurement"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuExtras"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew_Measurement">
+   <property name="text">
+    <string>New Measurement</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open...</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save Measurement</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionConnect_All">
+   <property name="text">
+    <string>Connect All Motor</string>
+   </property>
+  </action>
+  <action name="actionDisconnect_All">
+   <property name="text">
+    <string>Disconnect All</string>
+   </property>
+  </action>
+  <action name="actionCalibration">
+   <property name="text">
+    <string>Calibration</string>
+   </property>
+  </action>
+  <action name="actionJoint_Angle_Data">
+   <property name="text">
+    <string>Joint Angle Data</string>
+   </property>
+  </action>
+  <action name="actionJoint_Angular_Velocity_Data">
+   <property name="text">
+    <string>Joint Angular Velocity Data</string>
+   </property>
+  </action>
+  <action name="actionLeft_Foot">
+   <property name="text">
+    <string>Left Foot</string>
+   </property>
+  </action>
+  <action name="actionRight_Foot">
+   <property name="text">
+    <string>Right Foot</string>
+   </property>
+  </action>
+  <action name="actionStart_Timer">
+   <property name="text">
+    <string>Start Timer</string>
+   </property>
+  </action>
+  <action name="actionStart_Measurement">
+   <property name="text">
+    <string>Start IMUs Recording</string>
+   </property>
+  </action>
+  <action name="actionStop_Measurement">
+   <property name="text">
+    <string>Stop IMUs Recording</string>
+   </property>
+  </action>
+  <action name="actionwaist">
+   <property name="text">
+    <string>Waist</string>
+   </property>
+  </action>
+  <action name="actionStand">
+   <property name="text">
+    <string>Stand</string>
+   </property>
+  </action>
+  <action name="actionSit">
+   <property name="text">
+    <string>Sit</string>
+   </property>
+  </action>
+  <action name="actionActivate_Profile_Position_Mode">
+   <property name="text">
+    <string>Activate Profile Position Mode</string>
+   </property>
+  </action>
+  <action name="actionActivate_Profile_Velocity_Mode">
+   <property name="text">
+    <string>Activate Profile Velocity Mode</string>
+   </property>
+  </action>
+  <action name="actionStand_ver2">
+   <property name="text">
+    <string>Stand_ver2</string>
+   </property>
+  </action>
+  <action name="actionSit_ver2">
+   <property name="text">
+    <string>Sit_ver2</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
